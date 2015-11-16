@@ -1,0 +1,10 @@
+<%= form_for(@user) do |f|%>
+<tr>
+	<td><%= f.text_field :nombre%></td>
+	<td><%= f.collection_select :rol_id, @rols, :id, :rol, prompt: true%></td>
+	<td><%= f.text_field :usuario%></td>
+	<td><%= f.text_field :contrasena%></td>
+	<td><%= f.submit %>	</td>                      
+    <td><%=link_to("/admins", class: 'asin') do%><input type="button" value="Cancelar"><%end%></td>
+</tr>
+<%end%>

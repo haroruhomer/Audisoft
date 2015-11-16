@@ -1,0 +1,31 @@
+<div id="nuevo" class="retraso">
+	<%=link_to("/admins/new", class: 'asin') do%>
+		<input type="button" value="Nuevo Usuario">
+	<%end%>
+</div>>
+<div id="tabla"class="col-md-6 center-block text-center">
+	<table>
+				<th>Id del Usuario</th>
+                <th>Nombre del usuario</th>
+                <th>Rol del usuario</th>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                <th colspan="3">Operación</th>
+
+	  <% @users.each do |user|%>
+		<tr>
+			<td><%= text_field_tag 'id', user.id, disabled:true %></td>
+			<td><%= text_field_tag 'nombre', user.nombre, disabled:true %></td>
+			<td><%= text_field_tag 'rol', user.rol_id, disabled:true %></td>
+			<td><%= text_field_tag 'username', user.usuario, disabled:true %></td>
+			<td><%= text_field_tag 'clave', user.contrasena, disabled:true %></td>
+			<td><%=link_to(edit_admin_path(user), class: 'asin') do%><input type="button" value="Modificar"><%end%></td>
+			<td><%=link_to(user, method: :delete,data: {confirm: '¿Esta seguro?'}) do%>
+				<input type="button" value="Eliminar">
+			<%end%></td>
+			
+		</tr>
+		
+	  <%end%>
+	</table>
+</div>

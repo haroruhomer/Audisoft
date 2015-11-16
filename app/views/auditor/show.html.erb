@@ -1,0 +1,21 @@
+<div id="tabla" class="col-md-6 center-block text-center">
+    <table id="tablacontrol">
+        <th>Id Control</th>
+        <th>Control</th>
+        <th>Riesgo</th>
+        <th>Recomendación</th>
+        <th colspan="3">Operación</th>
+        <th></th>
+        <% @controls.each do |control|%>
+	        <tr>
+	        	<td><%= text_field_tag 'id', control.id, disabled:true %></td>
+				<td><%= text_field_tag 'control', control.control, disabled:true %></td>
+				<td><%= text_field_tag 'riesgo', control.riesgo_id, disabled:true %></td>
+				<td><%= text_field_tag 'recomendacion', control.recomendacion, disabled:true %></td>
+				<td><%=link_to(edit_auditor_path(control), class: 'asin') do%><input type="button" value="Modificar"><%end%></td>
+				<td><%=link_to(control, method: :delete,data: {confirm: '¿Esta seguro?'}) do%>
+					<input type="button" value="Eliminar">
+				<%end%></td>
+			</tr>
+        <%end%>
+    </table>

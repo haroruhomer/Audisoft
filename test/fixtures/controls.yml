@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  control: MyText
+  riesgo_id: 
+  recomendacion: MyText
+
+two:
+  control: MyText
+  riesgo_id: 
+  recomendacion: MyText

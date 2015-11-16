@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audisoft|Auditor</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1,0">
+</head>
+<body data-no-turbolink="true">
+        <div class="titulopequeno">
+            <div id="cerrarsesion">
+            	<b>Usuario registrado </b>
+            	<input type="button" value="Cerrar sesión">
+            </div>
+            <div>
+            	<h1> <%= image_tag("CatalogBDs.png") %> AUDISOFT<br>Auditoria de Bases de Datos</h1>
+            </div>
+        </div>
+         <div id="controles" class="col-md-2 col-sm-4">
+            <ul>
+                <li><a class="asin" href="/auditor"><h3>Inicio</h3></a></li>
+                <li><a href="/auditor/list"><h3>Controles</h3></a></li>
+                <ul>
+                    <li><%=link_to(new_auditor_path, class:'asin') do %><h4>Nuevo Control</h4><%end%></li>
+                    <li><a class="asin" href="modificarcontrol.html"><h4>Adminsitrar Controles</h4></a></li>
+                </ul>
+            </ul>
+        </div>
+<%= yield %>
+
+</body>
+</html>

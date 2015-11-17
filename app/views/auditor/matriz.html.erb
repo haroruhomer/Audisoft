@@ -1,0 +1,17 @@
+<div id="tabla" class="col-md-9 center-block text-center">
+    <table id="tablacontrol">
+        <tr>
+	        <th>Control</th>
+	        <th>Recomendación</th>
+	        <th>Riesgo</th>
+        </tr>
+        <% @ctrl_est.each do |ce|%>
+        <%control = Control.where("id=#{ce.control_id}")%>
+        <%riesgo = Riesgo.where("id=#{control.riesgo_id}") %>
+	        <tr>
+	        	<td><%= text_area_tag 'control', control.control, disabled:true%></td>
+				<td><%= text_field_tag 'riesgo', riesgo.valor, disabled:true %></td>
+				<td><%= text_area_tag 'recomendacion', control.recomendacion, disabled:true %></td>
+			</tr>
+        <%end%>
+    </table>

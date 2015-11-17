@@ -23,8 +23,12 @@ def auditar
   @estados=Estado.all
 end
 
-def audita
+def final
   
+end
+
+def matriz
+  @ctrl_est = ControlEstado.where("estado_id=2")
 end
 
 end

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'admins/new' => 'admins#newUser'
   get 'auditor/auditar' => 'auditor#auditar'
   post 'auditor/audita' => 'auditor#audita'
+  get 'auditor/final' => "auditor#final"
+  get 'auditor/matriz' => "auditor#matriz"
   resources :usuarios
   resources :rols
   resources :admins

@@ -20,6 +20,7 @@ end
 def auditar
   @controls=Control.all
   @contr_est=ControlEstado.new
+  @estados=Estado.all
 end
 
 def audita

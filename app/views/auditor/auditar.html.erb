@@ -8,12 +8,14 @@
         </tr>                   
 		<%=form_for(@contr_est) do |f| %>
 			<%@controls.each do |control|%>
+				<%cont=0%>				
 				<tr>
 					<td><%=f.hidden_field :control_id,value: control.id%><%=text_field_tag 'id', control.control, disabled: true%> </td>
-					<td><%=f.radio_button :estado_id,"1"%></td>
-					<td><%=f.radio_button :estado_id,"2" %></td>
+					<td><%= f.collection_select :estado_id, @estados, :id, :estado, prompt: true%></td>
+					<td></td>
 				</tr>
 			<%end%>
+			<%=f.submit%>
 		<%end%>
     </table>
    <br><br><input type="date" name="fechafinal" placeholder="Fecha Final">

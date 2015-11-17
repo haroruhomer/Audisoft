@@ -1,8 +1,8 @@
 <%=form_for(@control) do |f|%>
 <tr>	
-		<td><%= f.text_field :control%></td>
+		<td><%= f.text_area :control, placeholder:'Escriba aqui'%></td>
 		<td><%= f.collection_select :riesgo_id, @riesgos, :id, :valor, prompt: true%></td>
-		<td><%= f.text_field :recomendacion%></td>
+		<td><%= f.text_area :recomendacion, placeholder:'Escriba aqui'%></td>
 		<td><%= f.submit %></td>
 		<td><%=link_to("/auditor/list", class: 'asin') do%><input type="button" value="Cancelar"><%end%></td>
 </tr>

@@ -138,15 +138,25 @@ body{
     width: 10em;
 }
 
-#tabla input[type="button"]{
+#tabla input[type="submit"]{
     background-color: rgba(85,153,255,0);
     border:none;
-    height: 90%;
+    height: 2.5em;
+    width:7em;
     box-shadow: .10em .10em  #99AACC, .20em .20em  #CCCCCC ;
     border-radius: 25px;
     font-size: 17px;
 }
 
+#tabla input[type="button"]{
+    background-color: rgba(85,153,255,0);
+    border:none;
+    height: 2.5em;
+    width:7em;
+    box-shadow: .10em .10em  #99AACC, .20em .20em  #CCCCCC ;
+    border-radius: 25px;
+    font-size: 17px;
+}
 
 #nuevo{
     background: #CCDDFF;

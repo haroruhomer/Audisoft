@@ -10,14 +10,13 @@
 			<%@controls.each_with_index do |control, i|%>
 				<tr>
 					<td><%=f.hidden_field "control_id#{i+1}",value: control.id%><%=text_field_tag 'id', control.control, disabled: true%> </td>
-					<td><%= radio_button_tag "estado_id#{i+1}","1"%></td>
-					<td><%= radio_button_tag "estado_id#{i+1}","2"%></td>
+					<td><%= radio_button_tag "control_estado[estado_id#{i+1}]",1%></td>
+					<td><%= radio_button_tag  "control_estado[estado_id#{i+1}]",2%></td>
 				</tr>
 			<%end%>
 			<%=f.submit%>
 		<%end%>
     </table>
    <br><br><input type="date" name="fechafinal" placeholder="Fecha Final">
-   <br><br><<input type="submit" value="Finalizar"> 
         
 </div>

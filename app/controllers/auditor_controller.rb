@@ -17,6 +17,11 @@ def new
   @riesgos=Riesgo.all
 end
 
+def auditar
+  @controls=Control.all
+  @contr_est=ControlEstado.new
+end
+
 def audita
   
 end

@@ -60,7 +60,7 @@ body{
 .titulopequeno{
     width: 100%;
     padding-top: .2em;
-    height: 14%;
+    height: 7em;
     box-shadow: .10em .10em .10em .10em #444444, .50em .50em .50em .50em #555555;
 }
 .titulopequeno h1{
@@ -70,8 +70,8 @@ body{
     font-family: 'Aclonica', sans-serif;
 }
 .titulopequeno img{
-    width: 10%;
-    height: 65%;
+    width: 5em;
+    height: 3em;
     float: left;
 }
 
@@ -261,7 +261,7 @@ a:hover {
 }
 
 #tablacontrol{
-    margin-left: 150px;
+    margin-left: 15px;
 }
 
 .selector{

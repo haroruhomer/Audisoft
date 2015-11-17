@@ -7,12 +7,11 @@
             <th><h2>No</h2></th>
         </tr>                   
 		<%=form_for(@contr_est) do |f| %>
-			<%@controls.each do |control|%>
-				<%cont=0%>				
+			<%@controls.each_with_index do |control, i|%>
 				<tr>
-					<td><%=f.hidden_field :control_id,value: control.id%><%=text_field_tag 'id', control.control, disabled: true%> </td>
-					<td><%= f.collection_select :estado_id, @estados, :id, :estado, prompt: true%></td>
-					<td></td>
+					<td><%=f.hidden_field "control_id#{i+1}",value: control.id%><%=text_field_tag 'id', control.control, disabled: true%> </td>
+					<td><%= radio_button_tag "estado_id#{i+1}","1"%></td>
+					<td><%= radio_button_tag "estado_id#{i+1}","2"%></td>
 				</tr>
 			<%end%>
 			<%=f.submit%>

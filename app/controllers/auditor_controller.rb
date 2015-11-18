@@ -28,7 +28,15 @@ def final
 end
 
 def matriz
-  @ctrl_est = ControlEstado.where("estado_id=2")
+  @ctrl_est = Control.find_by_sql("SELECT * FROM controls INNER JOIN control_estados ON control_id=controls.id INNER JOIN riesgos ON riesgos.id=controls.riesgo_id WHERE estado_id=2")
+end
+
+def semaforo
+
+end
+
+def informe
+  
 end
 
 end

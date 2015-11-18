@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'auditor/final' => "auditor#final"
   get 'auditor/matriz' => "auditor#matriz"
   get 'auditor/semaforo' => "auditor#semaforo"
+  get '/informe' => 'auditor#informe'
+  get '/auditor/informe' => 'auditor#informe'
   resources :usuarios
   resources :rols
   resources :admins

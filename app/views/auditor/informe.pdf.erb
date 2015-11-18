@@ -5,7 +5,7 @@
 	        <th>Riesgo</th>
 	        <th>Recomendación</th>
         </tr>
-        <% @ctrl_est.each do |ce|%>
+        <% @controls.each do |ce|%>
   	        <tr>
 	        	<td><%= text_area_tag 'control', ce.control, disabled:true%></td>
 				<td><%= text_field_tag 'riesgo', ce.valor, disabled:true %></td>
@@ -14,3 +14,13 @@
         <%end%>
     </table>
 </div>
+    <table id="tablacontrol">
+        <tr>
+	        <th>Control</th>
+        </tr>
+        <% @controls.each do |ce|%>
+  	        <tr>
+	        	<td><%= text_area_tag 'control', ce.control, class:"riesgo#{ce.riesgo_id}", disabled:true%></td>
+			</tr>
+        <%end%>
+    </table>

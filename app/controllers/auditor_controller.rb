@@ -32,7 +32,7 @@ def matriz
 end
 
 def semaforo
-
+  @controls = Control.find_by_sql("SELECT * FROM controls INNER JOIN control_estados ON control_id=controls.id WHERE estado_id=2 order by riesgo_id")
 end
 
 def informe

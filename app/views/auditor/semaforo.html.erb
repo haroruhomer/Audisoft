@@ -1,0 +1,11 @@
+<div id="tabla" class="col-md-8 center-block text-center margin">
+    <table id="tablacontrol">
+        <tr>
+	        <th>Control</th>
+        </tr>
+        <% @controls.each do |ce|%>
+  	        <tr>
+	        	<td><%= text_area_tag 'control', ce.control, class:"riesgo#{ce.riesgo_id}", disabled:true%></td>
+			</tr>
+        <%end%>
+    </table>

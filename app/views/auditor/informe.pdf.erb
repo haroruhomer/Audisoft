@@ -1,5 +1,13 @@
 <div id="tabla" class="col-md-6 center-block text-center">
-    <table id="tablacontrol">
+   <table id="encabezado">
+       <tr><th colspan="3" class="header">Auditoria de Bases de Datos</th></tr>
+       <tr><td class="head">"Empresa"</td>
+       	<td class="head">"Fecha inicial"</td>
+       	<td class="head">"Fecha final"</td>
+       </tr>
+   </table>
+   <br><br><br>
+    <table id="matriz">
         <tr>
 	        <th>Control</th>
 	        <th>Riesgo</th>
@@ -7,14 +15,15 @@
         </tr>
         <% @controls.each do |ce|%>
   	        <tr>
-	        	<td><%= text_area_tag 'control', ce.control, disabled:true%></td>
-				<td><%= text_field_tag 'riesgo', ce.valor, disabled:true %></td>
-				<td><%= text_area_tag 'recomendacion', ce.recomendacion, disabled:true %></td>
+	        	<td><%= text_area_tag 'control', ce.control, disabled:true, class:"control"%></td>
+				<td><%= text_field_tag 'riesgo', ce.valor, disabled:true, class:"centroriesgo" %></td>
+				<td><%= text_area_tag 'recomendacion', ce.recomendacion, disabled:true, class:"Recomend" %></td>
 			</tr>
         <%end%>
     </table>
 </div>
-    <table id="tablacontrol">
+<br><br><br>
+    <table id="semaforo">
         <tr>
 	        <th>Control</th>
         </tr>
@@ -24,3 +33,6 @@
 			</tr>
         <%end%>
     </table>
+<br><br><br><br>
+<b>___________________</b> <b>____________________</b><br>
+<b>FIRMA AUDITOR(A)</b> <b>FIRMA AUDITADO(A)</b>

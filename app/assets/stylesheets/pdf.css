@@ -1,0 +1,81 @@
+#encabezado {
+	border: 2px solid #000;
+}
+.head{
+	border:2px solid #000;
+	text-align:center;
+	font-size:22px;
+	width:20em;
+}
+.header{
+	font-size:25px;
+}
+
+#matriz th{
+	font-size:20px;
+	border: 2px solid #000;
+	text-align:center;
+}
+
+.control{
+	font-size:20px;
+	height:6em;
+	border: 2px solid #000;
+	text-align:center;
+	width: 20em;
+}
+.recomend{
+	font-size:20px;
+	height:6em;
+	border: 2px solid #000;
+	text-align:center;
+	width: 20em;
+}
+.centroriesgo{
+	border: 2px solid #000;
+	text-align:justify;
+	width: 4em;
+	height:7.5em;
+} 
+.centroriesgo input[type="text"]{
+	border:none;
+}
+
+#semaforo table, th{
+	height:4em;
+	border: 2px solid #000;
+	font-size:22px;
+	text-align:center;
+}
+
+.riesgo1{
+	font-size:20px;
+	text-decoration: blink;
+	text-align:center;
+	width:45em;
+	height:4em;
+	border: 2px solid #5F5;
+	background-color:#55FF55;
+}
+.riesgo2{
+	font-size:20px;
+	text-decoration: blink;
+	text-align:center;
+	width:45em;
+	height:4em;
+	border: 2px solid #FF5;
+	background-color:#FFFF55;
+}
+.riesgo3{
+	font-size:20px;
+	text-decoration: blink;
+	text-align:center;
+	width:45em;
+	height:4em;
+	border: 2px solid #F55;
+	background-color:#FF7777;
+}
+b{
+	margin:7em;
+	
+}

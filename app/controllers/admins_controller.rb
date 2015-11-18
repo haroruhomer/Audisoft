@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+  before_action :validate
   def index
      @users=Usuario.all
    end
@@ -12,4 +13,13 @@ class AdminsController < ApplicationController
      @rols=Rol.all
      @user=Usuario.find(params[:id])
    end
+   
+   private
+
+def validate
+  if session[:rol].to_s!='1'
+    redirect_to root_path
+  end
+end
+   
 end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  get 'sessions/new'
+
   get 'admins/new' => 'admins#newUser'
   get 'auditor/auditar' => 'auditor#auditar'
   post 'auditor/audita' => 'auditor#audita'
@@ -9,6 +11,10 @@ Rails.application.routes.draw do
   get 'auditor/semaforo' => "auditor#semaforo"
   get '/informe' => 'auditor#informe'
   get '/auditor/informe' => 'auditor#informe'
+  get 'login' => 'sessions#new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   resources :usuarios
   resources :rols
   resources :admins
@@ -19,7 +25,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'auditor#index'
+   root 'sessions#new'
    get 'admins' => 'admins#index'
    post 'admins/create' => 'usuarios#create'
    #get 

@@ -10,8 +10,8 @@
 <body data-no-turbolink="true">
         <div class="titulopequeno">
             <div id="cerrarsesion">
-            	<b>Usuario registrado </b>
-            	<input type="button" value="Cerrar sesión">
+            	<b><%=session[:usuario]%> </b>
+            	<%=link_to logout_path, method: :delete do%><input type="button" value="Cerrar sesión"><%end%>
             </div>
             <div>
             	<h1> <%= image_tag("CatalogBDs.png") %> AUDISOFT<br>Auditoria de Bases de Datos</h1>

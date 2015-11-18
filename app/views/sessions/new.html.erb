@@ -1,0 +1,12 @@
+<div id="titulo" class="col-md-6 center-block text-center">
+	<h1><%= image_tag("CatalogBDs.png") %> AUDISOFT<br>Auditoria de Bases de Datos</h1>
+</div><br>
+<div id="login" class="col-md-6 center-block text-center">
+	
+	<%=form_for(:usuario, url: login_path) do |f|%>
+		<%=f.text_field :usuario, placeholder: "Usuario", required: true %>
+		<%=f.password_field :contrasena, placeholder: "Contraseña", required: true %>
+		<br /><%= notice %><br />
+		<%=f.submit "Iniciar Sesión", class: "btn btn-default"%>
+	<%end%>
+</div>
